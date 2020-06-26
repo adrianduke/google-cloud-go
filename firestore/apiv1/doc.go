@@ -30,7 +30,7 @@
 //
 // For information about setting deadlines, reusing contexts, and more
 // please visit godoc.org/cloud.google.com/go.
-package firestore // import "cloud.google.com/go/firestore/apiv1"
+package firestore // import "github.com/adrianduke/google-cloud-go/apiv1"
 
 import (
 	"context"

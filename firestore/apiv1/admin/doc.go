@@ -30,7 +30,7 @@
 //
 // For information about setting deadlines, reusing contexts, and more
 // please visit godoc.org/cloud.google.com/go.
-package apiv1 // import "cloud.google.com/go/firestore/apiv1/admin"
+package apiv1 // import "github.com/adrianduke/google-cloud-go/apiv1/admin"
 
 import (
 	"context"

@@ -33,9 +33,9 @@
 // For information about setting deadlines, reusing contexts, and more
 // please visit godoc.org/cloud.google.com/go.
 //
-// Deprecated: Please use "cloud.google.com/go/firestore/apiv1". This beta
+// Deprecated: Please use "github.com/adrianduke/google-cloud-go/apiv1". This beta
 // client will be removed in a future release.
-package firestore // import "cloud.google.com/go/firestore/apiv1beta1"
+package firestore // import "github.com/adrianduke/google-cloud-go/apiv1beta1"
 
 import (
 	"context"

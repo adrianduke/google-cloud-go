@@ -1,4 +1,4 @@
-module cloud.google.com/go/firestore
+module github.com/adrianduke/google-cloud-go
 
 go 1.11
 

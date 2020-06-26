@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"sort"
 
-	vkit "cloud.google.com/go/firestore/apiv1"
+	vkit "github.com/adrianduke/google-cloud-go/apiv1"
 	"cloud.google.com/go/internal/trace"
 	"google.golang.org/api/iterator"
 	pb "google.golang.org/genproto/googleapis/firestore/v1"
@@ -69,7 +69,7 @@ func (d *DocumentRef) Collection(id string) *CollectionRef {
 // In that case, Get returns a non-nil DocumentSnapshot whose Exists method return false and whose
 // ReadTime is the time of the failed read operation.
 func (d *DocumentRef) Get(ctx context.Context) (_ *DocumentSnapshot, err error) {
-	ctx = trace.StartSpan(ctx, "cloud.google.com/go/firestore.DocumentRef.Get")
+	ctx = trace.StartSpan(ctx, "github.com/adrianduke/google-cloud-go.DocumentRef.Get")
 	defer func() { trace.EndSpan(ctx, err) }()
 
 	if d == nil {
@@ -128,7 +128,7 @@ func (d *DocumentRef) Get(ctx context.Context) (_ *DocumentSnapshot, err error) 
 //     server will populate the stored document with the time that the request
 //     is processed. However, if the field value is non-zero it won't be saved.
 func (d *DocumentRef) Create(ctx context.Context, data interface{}) (_ *WriteResult, err error) {
-	ctx = trace.StartSpan(ctx, "cloud.google.com/go/firestore.DocumentRef.Create")
+	ctx = trace.StartSpan(ctx, "github.com/adrianduke/google-cloud-go.DocumentRef.Create")
 	defer func() { trace.EndSpan(ctx, err) }()
 
 	ws, err := d.newCreateWrites(data)
@@ -160,7 +160,7 @@ func (d *DocumentRef) newCreateWrites(data interface{}) ([]*pb.Write, error) {
 // fields. To delete some fields, use a Merge option with firestore.Delete as the
 // field value.
 func (d *DocumentRef) Set(ctx context.Context, data interface{}, opts ...SetOption) (_ *WriteResult, err error) {
-	ctx = trace.StartSpan(ctx, "cloud.google.com/go/firestore.DocumentRef.Set")
+	ctx = trace.StartSpan(ctx, "github.com/adrianduke/google-cloud-go.DocumentRef.Set")
 	defer func() { trace.EndSpan(ctx, err) }()
 
 	ws, err := d.newSetWrites(data, opts)
@@ -240,7 +240,7 @@ func fpvsFromData(v reflect.Value, prefix FieldPath, fpvs *[]fpv) {
 // Delete deletes the document. If the document doesn't exist, it does nothing
 // and returns no error.
 func (d *DocumentRef) Delete(ctx context.Context, preconds ...Precondition) (_ *WriteResult, err error) {
-	ctx = trace.StartSpan(ctx, "cloud.google.com/go/firestore.DocumentRef.Delete")
+	ctx = trace.StartSpan(ctx, "github.com/adrianduke/google-cloud-go.DocumentRef.Delete")
 	defer func() { trace.EndSpan(ctx, err) }()
 
 	ws, err := d.newDeleteWrites(preconds)
@@ -665,7 +665,7 @@ func (u *Update) process() (fpv, error) {
 // Update updates the document. The values at the given
 // field paths are replaced, but other fields of the stored document are untouched.
 func (d *DocumentRef) Update(ctx context.Context, updates []Update, preconds ...Precondition) (_ *WriteResult, err error) {
-	ctx = trace.StartSpan(ctx, "cloud.google.com/go/firestore.DocumentRef.Update")
+	ctx = trace.StartSpan(ctx, "github.com/adrianduke/google-cloud-go.DocumentRef.Update")
 	defer func() { trace.EndSpan(ctx, err) }()
 
 	ws, err := d.newUpdatePathWrites(updates, preconds)

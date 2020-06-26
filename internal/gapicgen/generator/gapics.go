@@ -236,11 +236,11 @@ var manualEntries = []manifestEntry{
 		ReleaseLevel:      "beta",
 	},
 	{
-		DistributionName:  "cloud.google.com/go/firestore",
+		DistributionName:  "github.com/adrianduke/google-cloud-go",
 		Description:       "Cloud Firestore API",
 		Language:          "Go",
 		ClientLibraryType: "manual",
-		DocsURL:           "https://pkg.go.dev/cloud.google.com/go/firestore",
+		DocsURL:           "https://pkg.go.dev/github.com/adrianduke/google-cloud-go",
 		ReleaseLevel:      "ga",
 	},
 	{

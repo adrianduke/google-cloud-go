@@ -536,7 +536,7 @@ var microgenGapicConfigs = []*microgenConfig{
 	{
 		inputDirectoryPath:    "google/firestore/admin/v1",
 		pkg:                   "apiv1",
-		importPath:            "cloud.google.com/go/firestore/apiv1/admin",
+		importPath:            "github.com/adrianduke/google-cloud-go/apiv1/admin",
 		gRPCServiceConfigPath: "google/firestore/admin/v1/firestore_admin_grpc_service_config.json",
 		apiServiceConfigPath:  "google/firestore/admin/firestore_admin_v1.yaml",
 		releaseLevel:          "ga",
@@ -544,7 +544,7 @@ var microgenGapicConfigs = []*microgenConfig{
 	{
 		inputDirectoryPath:    "google/firestore/v1",
 		pkg:                   "firestore",
-		importPath:            "cloud.google.com/go/firestore/apiv1",
+		importPath:            "github.com/adrianduke/google-cloud-go/apiv1",
 		gRPCServiceConfigPath: "google/firestore/v1/firestore_grpc_service_config.json",
 		apiServiceConfigPath:  "google/firestore/v1/firestore_v1.yaml",
 		releaseLevel:          "ga",
