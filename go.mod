@@ -1,4 +1,4 @@
-module cloud.google.com/go
+module github.com/adrianduke/google-cloud-go
 
 go 1.11
 
@@ -24,3 +24,5 @@ require (
 	google.golang.org/grpc v1.29.1
 	google.golang.org/protobuf v1.25.0 // indirect
 )
+
+replace cloud.google.com/go/firestore => github.com/adrianduke/firestore v1.2.5
